@@ -1,0 +1,31 @@
+language: node_js
+node_js:
+  - 13
+
+services: 
+  - docker
+
+#Pre-testing installs
+install:
+  -echo "nothing needs to be installed"
+
+#Scripts to be run such as tests
+before_script:
+  - echo "no tests"
+
+# Scrits being run
+script:
+  - sudo docker --version # give info on docker version
+  - sudo docker build -t simple-node ./
+  - sudo docker tag simple-node mfadhiligitau/image1:latest
+
+after_success: 
+  - echo "$DOCKER_PASSWORD" | docker login -u $ "$DOCKER_USERNAME" --password-stdin
+  - docker push mfadhiligitau/image1
+
+#deploy:
+#  provider: script
+#  script: bash docker_push
+#  on:
+#    branch: master
+

@@ -1,0 +1,13 @@
+{
+	"folders": [
+		{
+			"path": "deployment_screenshots"
+		},
+		{
+			"path": "src"
+		},
+		{
+			"path": "node_modules"
+		}
+	]
+}

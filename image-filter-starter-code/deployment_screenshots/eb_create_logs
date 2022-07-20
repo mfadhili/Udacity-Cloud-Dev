@@ -1,0 +1,106 @@
+mfadhili@mfadhili-HP-Notebook:~/Software/ALX/cloud_dev/cloud-developer/course-02/project/image-filter-starter-code$ eb init
+
+Select a default region
+1) us-east-1 : US East (N. Virginia)
+2) us-west-1 : US West (N. California)
+3) us-west-2 : US West (Oregon)
+4) eu-west-1 : EU (Ireland)
+5) eu-central-1 : EU (Frankfurt)
+6) ap-south-1 : Asia Pacific (Mumbai)
+7) ap-southeast-1 : Asia Pacific (Singapore)
+8) ap-southeast-2 : Asia Pacific (Sydney)
+9) ap-northeast-1 : Asia Pacific (Tokyo)
+10) ap-northeast-2 : Asia Pacific (Seoul)
+11) sa-east-1 : South America (Sao Paulo)
+12) cn-north-1 : China (Beijing)
+13) cn-northwest-1 : China (Ningxia)
+14) us-east-2 : US East (Ohio)
+15) ca-central-1 : Canada (Central)
+16) eu-west-2 : EU (London)
+17) eu-west-3 : EU (Paris)
+18) eu-north-1 : EU (Stockholm)
+19) eu-south-1 : EU (Milano)
+20) ap-east-1 : Asia Pacific (Hong Kong)
+21) me-south-1 : Middle East (Bahrain)
+22) af-south-1 : Africa (Cape Town)
+(default is 3): 
+
+
+Select an application to use
+1) udacity-cloud-developer-project-2-master example
+2) Udagram
+3) image-filter-starter-code
+4) [ Create new Application ]
+(default is 3): 4
+
+
+Enter Application Name
+(default is "image-filter-starter-code2"): Take 6
+Application Take 6 has been created.
+
+It appears you are using Node.js. Is this correct?
+(Y/n): y
+Select a platform branch.
+1) Node.js 16 running on 64bit Amazon Linux 2
+2) Node.js 14 running on 64bit Amazon Linux 2
+3) Node.js 12 running on 64bit Amazon Linux 2 (Deprecated)
+4) Node.js running on 64bit Amazon Linux (Deprecated)
+(default is 1): 
+
+Cannot setup CodeCommit because there is no Source Control setup, continuing with initialization
+Do you want to set up SSH for your instances?
+(Y/n): y
+
+Select a keypair.
+1) key4
+2) [ Create new KeyPair ]
+(default is 1): 1
+
+mfadhili@mfadhili-HP-Notebook:~/Software/ALX/cloud_dev/cloud-developer/course-02/project/image-filter-starter-code$ eb create
+Enter Environment Name
+(default is Take6-dev): 
+Enter DNS CNAME prefix
+(default is Take6-dev): 
+
+Select a load balancer type
+1) classic
+2) application
+3) network
+(default is 2): 
+
+
+Would you like to enable Spot Fleet requests for this environment? (y/N): y
+Enter a list of one or more valid EC2 instance types separated by commas (at least two instance types are recommended).
+(Defaults provided on Enter): 
+
+Creating application version archive "app-220707_160832956408".
+Uploading: [##################################################] 100% Done...
+Environment details for: Take6-dev
+  Application name: Take 6
+  Region: us-west-2
+  Deployed Version: app-220707_160832956408
+  Environment ID: e-sdx2cxtygt
+  Platform: arn:aws:elasticbeanstalk:us-west-2::platform/Node.js 16 running on 64bit Amazon Linux 2/5.5.4
+  Tier: WebServer-Standard-1.0
+  CNAME: Take6-dev.us-west-2.elasticbeanstalk.com
+  Updated: 2022-07-07 13:10:00.562000+00:00
+Printing Status:
+2022-07-07 13:09:58    INFO    createEnvironment is starting.
+2022-07-07 13:10:00    INFO    Using elasticbeanstalk-us-west-2-960861055423 as Amazon S3 storage bucket for environment data.
+2022-07-07 13:10:24    INFO    Created target group named: arn:aws:elasticloadbalancing:us-west-2:960861055423:targetgroup/awseb-AWSEB-TKXCK16LFJB3/d7081feb0038b951
+2022-07-07 13:10:24    INFO    Created security group named: sg-0fa0051c082d7e25a
+2022-07-07 13:10:40    INFO    Created security group named: awseb-e-sdx2cxtygt-stack-AWSEBSecurityGroup-BPBZOGHMLWD2
+2022-07-07 13:12:12    INFO    Created Auto Scaling group named: awseb-e-sdx2cxtygt-stack-AWSEBAutoScalingGroup-1MHSP31P3TUR1
+2022-07-07 13:12:12    INFO    Waiting for EC2 instances to launch. This may take a few minutes.
+2022-07-07 13:12:12    INFO    Created Auto Scaling group policy named: arn:aws:autoscaling:us-west-2:960861055423:scalingPolicy:2a83d7ee-6242-4d6b-abfa-07f50d8a64ec:autoScalingGroupName/awseb-e-sdx2cxtygt-stack-AWSEBAutoScalingGroup-1MHSP31P3TUR1:policyName/awseb-e-sdx2cxtygt-stack-AWSEBAutoScalingScaleUpPolicy-4FUTFPER4G2Z
+2022-07-07 13:12:12    INFO    Created Auto Scaling group policy named: arn:aws:autoscaling:us-west-2:960861055423:scalingPolicy:302360f7-8a61-4aa1-9f98-80a1bb3b040b:autoScalingGroupName/awseb-e-sdx2cxtygt-stack-AWSEBAutoScalingGroup-1MHSP31P3TUR1:policyName/awseb-e-sdx2cxtygt-stack-AWSEBAutoScalingScaleDownPolicy-1W8KVFRUO8FZW
+2022-07-07 13:12:12    INFO    Created CloudWatch alarm named: awseb-e-sdx2cxtygt-stack-AWSEBCloudwatchAlarmLow-1B4GFOW2BFAWS
+2022-07-07 13:12:12    INFO    Created CloudWatch alarm named: awseb-e-sdx2cxtygt-stack-AWSEBCloudwatchAlarmHigh-14QVSDLX7RDQE
+2022-07-07 13:12:28    INFO    Created load balancer named: arn:aws:elasticloadbalancing:us-west-2:960861055423:loadbalancer/app/awseb-AWSEB-S1XXB6JIM0KQ/36335dcb7200a791
+2022-07-07 13:12:31    INFO    Created Load Balancer listener named: arn:aws:elasticloadbalancing:us-west-2:960861055423:listener/app/awseb-AWSEB-S1XXB6JIM0KQ/36335dcb7200a791/68932357c1bb9d7d
+2022-07-07 13:12:57    INFO    Instance deployment completed successfully.
+2022-07-07 13:13:28    INFO    Application available at Take6-dev.us-west-2.elasticbeanstalk.com.
+2022-07-07 13:13:28    INFO    Successfully launched environment: Take6-dev
+                                
+mfadhili@mfadhili-HP-Notebook:~/Software/ALX/cloud_dev/cloud-developer/course-02/project/image-filter-starter-code$ ^C
+mfadhili@mfadhili-HP-Notebook:~/Software/ALX/cloud_dev/cloud-developer/course-02/project/image-filter-starter-code$ 
