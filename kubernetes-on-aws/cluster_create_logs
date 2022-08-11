@@ -1,0 +1,240 @@
+mfadhili@mfadhili-HP-Notebook:~/Softwar
+mfadhili@mfadhili-HP-Notebook:~/Softwar
+mfadhili@mfadhili-HP-Notebook:~/Software/Cloud Developer/kubernetes-on-aws$ eksctl create cluster\
+> --name klusterTest\
+> --version 1.22\
+>  --regi^C
+mfadhili@mfadhili-HP-Notebook:~/Software/Cloud Developer/kubernetes-on-aws$ eksctl create cluster--name klusterTest--version 1.22\
+>  --name klusterTest
+^XError: unknown resource type "cluster--name"
+
+Create resource(s)
+
+Usage: eksctl create [flags]
+
+Commands:
+  eksctl create addon                           Create an Addon
+  eksctl create cluster                         Create a cluster
+  eksctl create fargateprofile                  Create a Fargate profile
+  eksctl create iamidentitymapping              Create an IAM identity mapping
+  eksctl create iamserviceaccount               Create an iamserviceaccount - AWS IAM role bound to a Kubernetes service account
+  eksctl create nodegroup                       Create a nodegroup
+
+Common flags:
+  -C, --color string   toggle colorized logs (valid options: true, false, fabulous) (default "true")
+  -d, --dumpLogs       dump logs to disk on failure if set to true
+  -h, --help           help for this command
+  -v, --verbose int    set log level, use 0 to silence, 4 for debugging and 5 for debugging with AWS debug logging (default 3)
+
+Use 'eksctl create [command] --help' for more information about a command.
+
+
+For detailed docs go to https://eksctl.io/
+
+Error: unknown resource type "cluster--name"
+mfadhili@mfadhili-HP-Notebook:~/Software/Cloud Developer/kubernetes-on-aws$ eksctl create cluster--name klusterTest--version 1.22 --name klusterTest
+Error: unknown resource type "cluster--name"
+
+Create resource(s)
+
+Usage: eksctl create [flags]
+
+Commands:
+  eksctl create addon                           Create an Addon
+  eksctl create cluster                         Create a cluster
+  eksctl create fargateprofile                  Create a Fargate profile
+  eksctl create iamidentitymapping              Create an IAM identity mapping
+  eksctl create iamserviceaccount               Create an iamserviceaccount - AWS IAM role bound to a Kubernetes service account
+  eksctl create nodegroup                       Create a nodegroup
+
+Common flags:
+  -C, --color string   toggle colorized logs (valid options: true, false, fabulous) (default "true")
+  -d, --dumpLogs       dump logs to disk on failure if set to true
+  -h, --help           help for this command
+  -v, --verbose int    set log level, use 0 to silence, 4 for debugging and 5 for debugging with AWS debug logging (default 3)
+
+Use 'eksctl create [command] --help' for more information about a command.
+
+
+For detailed docs go to https://eksctl.io/
+
+Error: unknown resource type "cluster--name"
+mfadhili@mfadhili-HP-Notebook:~/Software/Cloud Developer/kubernetes-on-aws$ eksctl create cluster \
+> --name kluster2\
+>  --version 1.22 \
+> --region us-east-1 \
+> --nodegroup linux-nodes \
+> --node-type t2.micro \
+> --nodes 2
+Error: unknown flag: --nodegroup
+mfadhili@mfadhili-HP-Notebook:~/Software/Cloud Developer/kubernetes-on-aws$ eksctl create cluster --name kluster2 --version 1.22 --region us-east-1 --nodegroup-name linux-nodes --node-type t2.micro --nodes 2
+Error: checking AWS STS access – cannot get role ARN for current session: operation error STS: GetCallerIdentity, https response error StatusCode: 0, RequestID: , request send failed, Post "https://sts.us-east-1.amazonaws.com/": dial tcp: lookup sts.us-east-1.amazonaws.com on 127.0.0.53:53: read udp 127.0.0.1:47903->127.0.0.53:53: i/o timeout
+mfadhili@mfadhili-HP-Notebook:~/Software/Cloud Developer/kubernetes-on-aws$ eksctl create cluster --name kluster2 --version 1.22 --region us-east-1 --nodegroup-name linux-nodes --node-type t2.micro --nodes 2
+2022-07-21 09:44:33 [ℹ]  eksctl version 0.105.0
+2022-07-21 09:44:33 [ℹ]  using region us-east-1
+2022-07-21 09:44:36 [ℹ]  setting availability zones to [us-east-1e us-east-1a]
+2022-07-21 09:44:36 [ℹ]  subnets for us-east-1e - public:192.168.0.0/19 private:192.168.64.0/19
+2022-07-21 09:44:36 [ℹ]  subnets for us-east-1a - public:192.168.32.0/19 private:192.168.96.0/19
+2022-07-21 09:44:36 [ℹ]  nodegroup "linux-nodes" will use "" [AmazonLinux2/1.22]
+2022-07-21 09:44:36 [ℹ]  using Kubernetes version 1.22
+2022-07-21 09:44:36 [ℹ]  creating EKS cluster "kluster2" in "us-east-1" region with managed nodes
+2022-07-21 09:44:36 [ℹ]  will create 2 separate CloudFormation stacks for cluster itself and the initial managed nodegroup
+2022-07-21 09:44:36 [ℹ]  if you encounter any issues, check CloudFormation console or try 'eksctl utils describe-stacks --region=us-east-1 --cluster=kluster2'
+2022-07-21 09:44:36 [ℹ]  Kubernetes API endpoint access will use default of {publicAccess=true, privateAccess=false} for cluster "kluster2" in "us-east-1"
+2022-07-21 09:44:36 [ℹ]  CloudWatch logging will not be enabled for cluster "kluster2" in "us-east-1"
+2022-07-21 09:44:36 [ℹ]  you can enable it with 'eksctl utils update-cluster-logging --enable-types={SPECIFY-YOUR-LOG-TYPES-HERE (e.g. all)} --region=us-east-1 --cluster=kluster2'
+2022-07-21 09:44:36 [ℹ]  
+2 sequential tasks: { create cluster control plane "kluster2", 
+    2 sequential sub-tasks: { 
+        wait for control plane to become ready,
+        create managed nodegroup "linux-nodes",
+    } 
+}
+2022-07-21 09:44:36 [ℹ]  building cluster stack "eksctl-kluster2-cluster"
+2022-07-21 09:44:39 [ℹ]  deploying stack "eksctl-kluster2-cluster"
+2022-07-21 09:45:09 [ℹ]  waiting for CloudFormation stack "eksctl-kluster2-cluster"
+2022-07-21 09:45:40 [ℹ]  waiting for CloudFormation stack "eksctl-kluster2-cluster"
+2022-07-21 09:45:42 [✖]  unexpected status "ROLLBACK_IN_PROGRESS" while waiting for CloudFormation stack "eksctl-kluster2-cluster"
+2022-07-21 09:45:42 [ℹ]  fetching stack events in attempt to troubleshoot the root cause of the failure
+2022-07-21 09:45:43 [!]  AWS::EC2::SecurityGroup/ClusterSharedNodeSecurityGroup: DELETE_IN_PROGRESS
+2022-07-21 09:45:43 [!]  AWS::IAM::Role/ServiceRole: DELETE_IN_PROGRESS
+2022-07-21 09:45:43 [!]  AWS::EC2::Subnet/SubnetPublicUSEAST1A: DELETE_IN_PROGRESS
+2022-07-21 09:45:43 [!]  AWS::EC2::SecurityGroup/ControlPlaneSecurityGroup: DELETE_IN_PROGRESS
+2022-07-21 09:45:43 [!]  AWS::EC2::Subnet/SubnetPrivateUSEAST1A: DELETE_IN_PROGRESS
+2022-07-21 09:45:43 [!]  AWS::EC2::Subnet/SubnetPrivateUSEAST1E: DELETE_IN_PROGRESS
+2022-07-21 09:45:43 [!]  AWS::EC2::RouteTable/PrivateRouteTableUSEAST1E: DELETE_IN_PROGRESS
+2022-07-21 09:45:43 [!]  AWS::EC2::RouteTable/PublicRouteTable: DELETE_IN_PROGRESS
+2022-07-21 09:45:43 [!]  AWS::EC2::SecurityGroupIngress/IngressInterNodeGroupSG: DELETE_IN_PROGRESS
+2022-07-21 09:45:43 [!]  AWS::EC2::VPCGatewayAttachment/VPCGatewayAttachment: DELETE_IN_PROGRESS
+2022-07-21 09:45:43 [!]  AWS::EC2::RouteTable/PrivateRouteTableUSEAST1A: DELETE_IN_PROGRESS
+2022-07-21 09:45:43 [!]  AWS::EC2::NatGateway/NATGateway: DELETE_IN_PROGRESS
+2022-07-21 09:45:43 [!]  AWS::IAM::Policy/PolicyCloudWatchMetrics: DELETE_IN_PROGRESS
+2022-07-21 09:45:43 [!]  AWS::IAM::Policy/PolicyELBPermissions: DELETE_IN_PROGRESS
+2022-07-21 09:45:43 [✖]  AWS::EC2::RouteTable/PrivateRouteTableUSEAST1E: CREATE_FAILED – "Resource creation cancelled"
+2022-07-21 09:45:43 [✖]  AWS::EC2::RouteTable/PublicRouteTable: CREATE_FAILED – "Resource creation cancelled"
+2022-07-21 09:45:43 [✖]  AWS::EC2::RouteTable/PrivateRouteTableUSEAST1A: CREATE_FAILED – "Resource creation cancelled"
+2022-07-21 09:45:43 [✖]  AWS::EC2::NatGateway/NATGateway: CREATE_FAILED – "Resource creation cancelled"
+2022-07-21 09:45:43 [✖]  AWS::IAM::Policy/PolicyCloudWatchMetrics: CREATE_FAILED – "Resource creation cancelled"
+2022-07-21 09:45:43 [✖]  AWS::EC2::VPCGatewayAttachment/VPCGatewayAttachment: CREATE_FAILED – "Resource creation cancelled"
+2022-07-21 09:45:43 [✖]  AWS::IAM::Policy/PolicyELBPermissions: CREATE_FAILED – "Resource creation cancelled"
+2022-07-21 09:45:43 [✖]  AWS::EKS::Cluster/ControlPlane: CREATE_FAILED – "Resource handler returned message: \"Cannot create cluster 'kluster2' because us-east-1e, the targeted availability zone, does not currently have sufficient capacity to support the cluster. Retry and choose from these availability zones: us-east-1a, us-east-1b, us-east-1c, us-east-1d, us-east-1f (Service: Eks, Status Code: 400, Request ID: c37e3472-e8a5-4800-bf91-24db6a65a771)\" (RequestToken: 31dd2ac1-03bb-eb54-74b1-53dfda761786, HandlerErrorCode: InvalidRequest)"
+2022-07-21 09:45:43 [!]  1 error(s) occurred and cluster hasn't been created properly, you may wish to check CloudFormation console
+2022-07-21 09:45:43 [ℹ]  to cleanup resources, run 'eksctl delete cluster --region=us-east-1 --name=kluster2'
+2022-07-21 09:45:43 [✖]  ResourceNotReady: failed waiting for successful resource state
+Error: failed to create cluster "kluster2"
+mfadhili@mfadhili-HP-Notebook:~/Software/Cloud Developer/kubernetes-on-aws$ eksctl create cluster --name kluster2 --version 1.22 --region us-east-1a,us-east-1b --nodegroup-name linux-nodes --node-type t2.micro --nodes 2
+Error: checking AWS STS access – cannot get role ARN for current session: operation error STS: GetCallerIdentity, https response error StatusCode: 0, RequestID: , request send failed, Post "https://sts.us-east-1a,us-east-1b.amazonaws.com/": dial tcp: lookup sts.us-east-1a,us-east-1b.amazonaws.com: no such host
+mfadhili@mfadhili-HP-Notebook:~/Software/Cloud Developer/kubernetes-on-aws$ eksctl create cluster --name kluster2 --version 1.22 --region us-west-1 --nodegroup-name linux-nodes --node-type t2.micro --nodes 2
+2022-07-21 09:49:04 [ℹ]  eksctl version 0.105.0
+2022-07-21 09:49:04 [ℹ]  using region us-west-1
+2022-07-21 09:49:08 [ℹ]  setting availability zones to [us-west-1a us-west-1b]
+2022-07-21 09:49:08 [ℹ]  subnets for us-west-1a - public:192.168.0.0/19 private:192.168.64.0/19
+2022-07-21 09:49:08 [ℹ]  subnets for us-west-1b - public:192.168.32.0/19 private:192.168.96.0/19
+2022-07-21 09:49:08 [ℹ]  nodegroup "linux-nodes" will use "" [AmazonLinux2/1.22]
+2022-07-21 09:49:08 [ℹ]  using Kubernetes version 1.22
+2022-07-21 09:49:08 [ℹ]  creating EKS cluster "kluster2" in "us-west-1" region with managed nodes
+2022-07-21 09:49:08 [ℹ]  will create 2 separate CloudFormation stacks for cluster itself and the initial managed nodegroup
+2022-07-21 09:49:08 [ℹ]  if you encounter any issues, check CloudFormation console or try 'eksctl utils describe-stacks --region=us-west-1 --cluster=kluster2'
+2022-07-21 09:49:08 [ℹ]  Kubernetes API endpoint access will use default of {publicAccess=true, privateAccess=false} for cluster "kluster2" in "us-west-1"
+2022-07-21 09:49:08 [ℹ]  CloudWatch logging will not be enabled for cluster "kluster2" in "us-west-1"
+2022-07-21 09:49:08 [ℹ]  you can enable it with 'eksctl utils update-cluster-logging --enable-types={SPECIFY-YOUR-LOG-TYPES-HERE (e.g. all)} --region=us-west-1 --cluster=kluster2'
+2022-07-21 09:49:08 [ℹ]  
+2 sequential tasks: { create cluster control plane "kluster2", 
+    2 sequential sub-tasks: { 
+        wait for control plane to become ready,
+        create managed nodegroup "linux-nodes",
+    } 
+}
+2022-07-21 09:49:08 [ℹ]  building cluster stack "eksctl-kluster2-cluster"
+2022-07-21 09:49:13 [ℹ]  deploying stack "eksctl-kluster2-cluster"
+2022-07-21 09:49:43 [ℹ]  waiting for CloudFormation stack "eksctl-kluster2-cluster"
+2022-07-21 09:50:14 [ℹ]  waiting for CloudFormation stack "eksctl-kluster2-cluster"
+2022-07-21 09:51:18 [ℹ]  waiting for CloudFormation stack "eksctl-kluster2-cluster"
+2022-07-21 09:52:20 [ℹ]  waiting for CloudFormation stack "eksctl-kluster2-cluster"
+2022-07-21 09:53:23 [ℹ]  waiting for CloudFormation stack "eksctl-kluster2-cluster"
+2022-07-21 09:54:24 [ℹ]  waiting for CloudFormation stack "eksctl-kluster2-cluster"
+2022-07-21 09:55:26 [ℹ]  waiting for CloudFormation stack "eksctl-kluster2-cluster"
+^C
+mfadhili@mfadhili-HP-Notebook:~/Software/Cloud Developer/kubernetes-on-aws$ eksctl create cluster --name kluster2 --version 1.22 --region us-east-1 --nodegroup-name linux-nodes --node-type t2.micro --nodes 2
+2022-07-21 09:56:09 [ℹ]  eksctl version 0.105.0
+2022-07-21 09:56:09 [ℹ]  using region us-east-1
+2022-07-21 09:56:11 [ℹ]  setting availability zones to [us-east-1f us-east-1c]
+2022-07-21 09:56:11 [ℹ]  subnets for us-east-1f - public:192.168.0.0/19 private:192.168.64.0/19
+2022-07-21 09:56:11 [ℹ]  subnets for us-east-1c - public:192.168.32.0/19 private:192.168.96.0/19
+2022-07-21 09:56:11 [ℹ]  nodegroup "linux-nodes" will use "" [AmazonLinux2/1.22]
+2022-07-21 09:56:11 [ℹ]  using Kubernetes version 1.22
+2022-07-21 09:56:11 [ℹ]  creating EKS cluster "kluster2" in "us-east-1" region with managed nodes
+2022-07-21 09:56:11 [ℹ]  will create 2 separate CloudFormation stacks for cluster itself and the initial managed nodegroup
+2022-07-21 09:56:11 [ℹ]  if you encounter any issues, check CloudFormation console or try 'eksctl utils describe-stacks --region=us-east-1 --cluster=kluster2'
+2022-07-21 09:56:11 [ℹ]  Kubernetes API endpoint access will use default of {publicAccess=true, privateAccess=false} for cluster "kluster2" in "us-east-1"
+2022-07-21 09:56:11 [ℹ]  CloudWatch logging will not be enabled for cluster "kluster2" in "us-east-1"
+2022-07-21 09:56:11 [ℹ]  you can enable it with 'eksctl utils update-cluster-logging --enable-types={SPECIFY-YOUR-LOG-TYPES-HERE (e.g. all)} --region=us-east-1 --cluster=kluster2'
+2022-07-21 09:56:11 [ℹ]  
+2 sequential tasks: { create cluster control plane "kluster2", 
+    2 sequential sub-tasks: { 
+        wait for control plane to become ready,
+        create managed nodegroup "linux-nodes",
+    } 
+}
+2022-07-21 09:56:11 [ℹ]  building cluster stack "eksctl-kluster2-cluster"
+2022-07-21 09:56:13 [!]  1 error(s) occurred and cluster hasn't been created properly, you may wish to check CloudFormation console
+2022-07-21 09:56:13 [ℹ]  to cleanup resources, run 'eksctl delete cluster --region=us-east-1 --name=kluster2'
+2022-07-21 09:56:13 [✖]  creating CloudFormation stack "eksctl-kluster2-cluster": operation error CloudFormation: CreateStack, https response error StatusCode: 400, RequestID: 518b8495-c71d-4f51-8c91-67be6206dead, AlreadyExistsException: Stack [eksctl-kluster2-cluster] already exists
+Error: failed to create cluster "kluster2"
+mfadhili@mfadhili-HP-Notebook:~/Software/Cloud Developer/kubernetes-on-aws$ eksctl create cluster --name kluster3 --version 1.22 --region us-east-1 --nodegroup-name linux-nodes --node-type t2.micro --nodes 2
+2022-07-21 09:56:36 [ℹ]  eksctl version 0.105.0
+2022-07-21 09:56:36 [ℹ]  using region us-east-1
+2022-07-21 09:56:37 [ℹ]  setting availability zones to [us-east-1c us-east-1f]
+2022-07-21 09:56:37 [ℹ]  subnets for us-east-1c - public:192.168.0.0/19 private:192.168.64.0/19
+2022-07-21 09:56:37 [ℹ]  subnets for us-east-1f - public:192.168.32.0/19 private:192.168.96.0/19
+2022-07-21 09:56:37 [ℹ]  nodegroup "linux-nodes" will use "" [AmazonLinux2/1.22]
+2022-07-21 09:56:37 [ℹ]  using Kubernetes version 1.22
+2022-07-21 09:56:37 [ℹ]  creating EKS cluster "kluster3" in "us-east-1" region with managed nodes
+2022-07-21 09:56:37 [ℹ]  will create 2 separate CloudFormation stacks for cluster itself and the initial managed nodegroup
+2022-07-21 09:56:37 [ℹ]  if you encounter any issues, check CloudFormation console or try 'eksctl utils describe-stacks --region=us-east-1 --cluster=kluster3'
+2022-07-21 09:56:37 [ℹ]  Kubernetes API endpoint access will use default of {publicAccess=true, privateAccess=false} for cluster "kluster3" in "us-east-1"
+2022-07-21 09:56:37 [ℹ]  CloudWatch logging will not be enabled for cluster "kluster3" in "us-east-1"
+2022-07-21 09:56:37 [ℹ]  you can enable it with 'eksctl utils update-cluster-logging --enable-types={SPECIFY-YOUR-LOG-TYPES-HERE (e.g. all)} --region=us-east-1 --cluster=kluster3'
+2022-07-21 09:56:37 [ℹ]  
+2 sequential tasks: { create cluster control plane "kluster3", 
+    2 sequential sub-tasks: { 
+        wait for control plane to become ready,
+        create managed nodegroup "linux-nodes",
+    } 
+}
+2022-07-21 09:56:37 [ℹ]  building cluster stack "eksctl-kluster3-cluster"
+2022-07-21 09:56:38 [ℹ]  deploying stack "eksctl-kluster3-cluster"
+2022-07-21 09:57:08 [ℹ]  waiting for CloudFormation stack "eksctl-kluster3-cluster"
+2022-07-21 09:57:39 [ℹ]  waiting for CloudFormation stack "eksctl-kluster3-cluster"
+2022-07-21 09:58:42 [ℹ]  waiting for CloudFormation stack "eksctl-kluster3-cluster"
+2022-07-21 09:59:44 [ℹ]  waiting for CloudFormation stack "eksctl-kluster3-cluster"
+2022-07-21 10:00:47 [ℹ]  waiting for CloudFormation stack "eksctl-kluster3-cluster"
+2022-07-21 10:01:48 [ℹ]  waiting for CloudFormation stack "eksctl-kluster3-cluster"
+2022-07-21 10:02:52 [ℹ]  waiting for CloudFormation stack "eksctl-kluster3-cluster"
+2022-07-21 10:03:55 [ℹ]  waiting for CloudFormation stack "eksctl-kluster3-cluster"
+2022-07-21 10:04:58 [ℹ]  waiting for CloudFormation stack "eksctl-kluster3-cluster"
+2022-07-21 10:06:00 [ℹ]  waiting for CloudFormation stack "eksctl-kluster3-cluster"
+2022-07-21 10:07:01 [ℹ]  waiting for CloudFormation stack "eksctl-kluster3-cluster"
+2022-07-21 10:08:04 [ℹ]  waiting for CloudFormation stack "eksctl-kluster3-cluster"
+2022-07-21 10:09:05 [ℹ]  waiting for CloudFormation stack "eksctl-kluster3-cluster"
+2022-07-21 10:11:18 [ℹ]  building managed nodegroup stack "eksctl-kluster3-nodegroup-linux-nodes"
+2022-07-21 10:11:18 [ℹ]  deploying stack "eksctl-kluster3-nodegroup-linux-nodes"
+2022-07-21 10:11:18 [ℹ]  waiting for CloudFormation stack "eksctl-kluster3-nodegroup-linux-nodes"
+2022-07-21 10:11:50 [ℹ]  waiting for CloudFormation stack "eksctl-kluster3-nodegroup-linux-nodes"
+2022-07-21 10:12:27 [ℹ]  waiting for CloudFormation stack "eksctl-kluster3-nodegroup-linux-nodes"
+2022-07-21 10:13:57 [ℹ]  waiting for CloudFormation stack "eksctl-kluster3-nodegroup-linux-nodes"
+2022-07-21 10:15:14 [ℹ]  waiting for CloudFormation stack "eksctl-kluster3-nodegroup-linux-nodes"
+2022-07-21 10:15:14 [ℹ]  waiting for the control plane availability...
+2022-07-21 10:15:19 [✔]  saved kubeconfig as "/home/mfadhili/.kube/config"
+2022-07-21 10:15:19 [ℹ]  no tasks
+2022-07-21 10:15:19 [✔]  all EKS cluster resources for "kluster3" have been created
+2022-07-21 10:15:22 [ℹ]  nodegroup "linux-nodes" has 2 node(s)
+2022-07-21 10:15:22 [ℹ]  node "ip-192-168-14-170.ec2.internal" is ready
+2022-07-21 10:15:22 [ℹ]  node "ip-192-168-32-245.ec2.internal" is ready
+2022-07-21 10:15:22 [ℹ]  waiting for at least 2 node(s) to become ready in "linux-nodes"
+2022-07-21 10:15:23 [ℹ]  nodegroup "linux-nodes" has 2 node(s)
+2022-07-21 10:15:23 [ℹ]  node "ip-192-168-14-170.ec2.internal" is ready
+2022-07-21 10:15:23 [ℹ]  node "ip-192-168-32-245.ec2.internal" is ready
+2022-07-21 10:15:27 [ℹ]  kubectl command should work with "/home/mfadhili/.kube/config", try 'kubectl get nodes'
+2022-07-21 10:15:27 [✔]  EKS cluster "kluster3" in "us-east-1" region is ready
+mfadhili@mfadhili-HP-Notebook:~/Software/Cloud Developer/kubernetes-on-aws$ 

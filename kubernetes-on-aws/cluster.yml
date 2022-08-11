@@ -1,0 +1,48 @@
+apiVersion: eksctl.io/v1alpha5
+kind: ClusterConfig
+
+metadata:
+  name: demo-eks-cluster
+  region: ap-south-1
+  version: "1.22"
+
+vpc:
+  subnets:
+    public:
+      pub-ap-south-1a: 
+        id: "xxxxxxxx"
+      pub-ap-south-1b: 
+        id: "xxxxxxxx"
+      pub-ap-south-1c: 
+        id: "xxxxxxxx"
+managedNodeGroups:
+  - name: dev-ng-1
+    ami: ami-015fd6563bf7915c6
+    overrideBootstrapCommand: |
+      #!/bin/bash
+      /etc/eks/bootstrap.sh demo-eks-cluster
+    instanceType: t3.large
+    minSize: 1
+    maxSize: 1
+    desiredCapacity: 1
+    volumeSize: 20
+    volumeEncrypted: true
+    volumeType: gp3
+    subnets:
+      - pub-ap-south-1a
+      - pub-ap-south-1b
+      - pub-ap-south-1c
+    labels: {role: dev}
+    ssh:
+      publicKeyName: Your-EC2-Key-Pair-Name
+    tags:
+      Env: Dev
+    iam:
+      attachPolicyARNs:
+        - arn:aws:iam::aws:policy/AmazonEKSWorkerNodePolicy
+        - arn:aws:iam::aws:policy/AmazonEKS_CNI_Policy
+        - arn:aws:iam::aws:policy/ElasticLoadBalancingFullAccess
+        - arn:aws:iam::aws:policy/AmazonEC2ContainerRegistryReadOnly
+        - arn:aws:iam::aws:policy/CloudWatchAgentServerPolicy
+      withAddonPolicies:
+        autoScaler: true
