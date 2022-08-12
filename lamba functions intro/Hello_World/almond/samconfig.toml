@@ -1,0 +1,11 @@
+version = 0.1
+[default]
+[default.deploy]
+[default.deploy.parameters]
+stack_name = "almond1"
+s3_bucket = "aws-sam-cli-managed-default-samclisourcebucket-phh2f26ljk3q"
+s3_prefix = "almond1"
+region = "us-east-1"
+confirm_changeset = true
+capabilities = "CAPABILITY_IAM"
+image_repositories = []

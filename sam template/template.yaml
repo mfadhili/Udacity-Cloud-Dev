@@ -1,0 +1,49 @@
+#template cast for using SAM in deploying Lambda functions
+AWSTemplateFormatVersion: '2010-09-09'
+Transform: 'AWS::Serverless-2016-10-31' #transform to include objects
+
+Description: >
+  app_name
+  description statement
+
+Globals:
+Function:
+  Runtime: nodejs6.10
+  Timeout: 180
+  #Handler: index.handler
+  Environment: 
+    Variables: 
+  #     TABLE_NAME: data-table
+  # Api:
+  #   EndpointConfiguration: REGIONAL
+  #   Cors: "'www.example.com'"
+  #   Domain:
+  #     DomainName: www.my-domain.com
+  #     CertificateArn: my-valid-cert-arn
+  #     EndpointConfiguration: EDGE
+
+  # SimpleTable:
+  #   SSESpecification:
+  #     SSEEnabled: true
+ 
+
+Resources:
+  #Lambda serveless function
+  MyFunction:
+    Type: 'AWS::Serverless::Function' # creates Lambda, IAM execution role and event to trigger function
+    Properties: 
+      Handler: index.handler # starting point in file index.js
+      Runtime: nodejs6.10
+      CodeUri: 's3://my-bucket/function.zip'
+      Description: function description
+      Architectures:
+        - x86_64
+      Events:
+        #A tells function to trigger an api
+        ExampleApi:
+          Type: Api
+          Properties: 
+          Path: /example
+          Method: GET
+      
+    

@@ -1,0 +1,19 @@
+{
+  "name": "get-api",
+  "version": "1.0.0",
+  "description": "Get-APi Lambda function",
+  "main": "app.js",
+  "author": "SAM CLI",
+  "license": "MIT",
+  "dependencies": {
+    "axios": "^0.21.1",
+    "aws-sdk": "^2.1194.0"
+  },
+  "scripts": {
+    "test": "mocha tests/unit/"
+  },
+  "devDependencies": {
+    "chai": "^4.2.0",
+    "mocha": "^9.1.4"
+  }
+}

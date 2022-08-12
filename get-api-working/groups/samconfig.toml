@@ -1,0 +1,12 @@
+version = 0.1
+[default]
+[default.deploy]
+[default.deploy.parameters]
+stack_name = "get-api-okay"
+s3_bucket = "aws-sam-cli-managed-default-samclisourcebucket-phh2f26ljk3q"
+s3_prefix = "get-api-okay"
+region = "us-east-1"
+confirm_changeset = true
+capabilities = "CAPABILITY_IAM"
+disable_rollback = true
+image_repositories = []

@@ -1,0 +1,11 @@
+version = 0.1
+[default]
+[default.deploy]
+[default.deploy.parameters]
+stack_name = "get-Api"
+s3_bucket = "aws-sam-cli-managed-default-samclisourcebucket-phh2f26ljk3q"
+s3_prefix = "get-Api"
+region = "us-east-1"
+confirm_changeset = true
+capabilities = "CAPABILITY_IAM"
+image_repositories = []

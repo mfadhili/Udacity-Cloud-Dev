@@ -1,0 +1,15 @@
+-------------------------------------------------------------------------------------------------------------------------------------------------------
+Outputs                                                                                                                                               
+-------------------------------------------------------------------------------------------------------------------------------------------------------
+Key                 GetApiFunctionIamRole                                                                                                             
+Description         Implicit IAM Role created for GetApi function                                                                                     
+Value               arn:aws:iam::491297492276:role/get-api-okay-GetApiFunctionRole-1KGC08FN2LNPJ                                                      
+
+Key                 GetApiApi                                                                                                                         
+Description         API Gateway endpoint URL for Prod stage for GetApi function                                                                       
+Value               https://pesne65ckb.execute-api.us-east-1.amazonaws.com/Prod/groups/                                                               
+
+Key                 GetApiFunction                                                                                                                    
+Description         GetApi Lambda Function ARN                                                                                                        
+Value               arn:aws:lambda:us-east-1:491297492276:function:get-api-okay-GetApiFunction-gzt66KgYHG8C                                           
+-------------------------------------------------------------------------------------------------------------------------------------------------------
