@@ -1,13 +1,14 @@
 import { APIGatewayProxyHandler, APIGatewayProxyEvent, APIGatewayProxyResult } from "aws-lambda";
 import "source-nap-support/register";
 import * as AWS from "aws-sdk";
+import { middyfy } from '../../libs/lambda';
 
 
 const docClient = new AWS.DynamoDB.DocumentClient()
 
 const groupsTable = process.env.GROUPS_TABLE
 
-export const app: APIGatewayProxyHandler = async (event: APIGatewayProxyEvent) : Promise<APIGatewayProxyResult> => {
+ const app1: APIGatewayProxyHandler = async (event: APIGatewayProxyEvent) : Promise<APIGatewayProxyResult> => {
     console.log('Processing event: ', event)
 
     const result = await docClient.scan({
@@ -26,3 +27,5 @@ export const app: APIGatewayProxyHandler = async (event: APIGatewayProxyEvent) :
         })
     }
 } 
+
+export  const getGroup = middyfy(app1)

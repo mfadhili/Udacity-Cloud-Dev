@@ -1,6 +1,6 @@
 import type { AWS } from '@serverless/typescript';
 
-import {app}  from '@functions/http/getGroups';
+import getGroup from '@functions/http/getGroups';
 
 const serverlessConfiguration: AWS = {
   service: 'udagram',
@@ -36,7 +36,7 @@ const serverlessConfiguration: AWS = {
     },
   },
   // import the function via paths
-  functions: { app },
+  functions: { getGroup },
   package: { individually: true },
   custom: {
     esbuild: {
