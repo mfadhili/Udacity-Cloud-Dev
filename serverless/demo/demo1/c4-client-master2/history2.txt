@@ -1,0 +1,298 @@
+    1  sudo apt install ./google-chrome-stable_current_amd64.deb 
+    2  sudo apt install ./code_1.70.2-1660629410_amd64.deb 
+    3  sudo apt install ./freedownloadmanager.deb 
+    4  printenv > /tmp/tmp-51318sS133Y6AqoaItxt
+    5  sudo apt update
+    6  sudo apt install git
+    7  sudo apt install gnome-shell-extension-autohidetopbar
+    8  shutdown +0
+    9  ls
+   10  uptime
+   11  whoai
+   12  whoami
+   13  code
+   14  sudo apt install gnome-shell-extensions
+   15  sudo apt install mysql-server
+   16  sudo mysql
+   17  mysql -u root -p
+   18  sudo mysql_secure_installation 
+   19  clear
+   20  mysql -u root -p
+   21  sudo apt install ./Downloads/mysql-workbench-community_8.0.30-1ubuntu22.04_amd64.deb 
+   22  sudo apt install mysql-workbench-community
+   23  sudo apt install ./Downloads/mysql-workbench-community-dbgsym_8.0.30-1ubuntu22.04_amd64.deb 
+   24  sudo snap install mysql-workbench-community
+   25  sudo systemctl start mysql
+   26  sudo systemctl status mysql
+   27  sudo apt install ./Downloads/slack-desktop-4.28.171-amd64.deb 
+   28  shutdown +0
+   29  mysql -u root -p
+   30  sudo snap connect mysql-workbench-community:password-manager-service :password-manager-service
+   31  sudo snap remove mysql-workbench-community 
+   32  sudo apt-get install mysql-workbench-community
+   33  sudo apt install ./Downloads/mysql-workbench-community_8.0.19-1ubuntu19.10_amd64.deb 
+   34  sudo apt install ./Downloads/zoom_amd64.deb 
+   35  sudo mysql-workbench-community 
+   36  sudo i
+   37  sudo -i
+   38  mysql-workbench-community 
+   39  bash sqldeveloper
+   40  cd sqldeveloper/bin/
+   41  ls
+   42  sqldeveloper
+   43  bash sqldeveloper
+   44  cd ..
+   45  vim sqldeveloper.sh 
+   46  sudo vim sqldeveloper.sh 
+   47  sh sqldeveloper.sh 
+   48  exit
+   49  sudo apt install ./Downloads/mysql-workbench-community_8.0.19-1ubuntu19.10_amd64.deb 
+   50  sudo apt install ./Downloads/zoom_amd64.deb 
+   51  sudo apt -y install sqldeveloper-package
+   52  apropos sql
+   53  sqldeveloper
+   54  clear
+   55  cd ./Downloads/
+   56  ls
+   57  cd ..
+   58  sudo dpkg -i ./Downloads/jdk-18_linux-x64_bin.deb 
+   59  sudo apt install ./Downloads/jdk-18_linux-x64_bin.deb 
+   60  sudo apt --fix-broken install ./Downloads/jdk-18_linux-x64_bin.deb 
+   61  ls /usr/lib/jvm
+   62  cd opt/
+   63  ls
+   64  sudo unzip ../Downloads/sqldeveloper-22.2.0.173.2018-no-jre.zip
+   65  ls
+   66  cd sqldeveloper/
+   67  ls
+   68  vim sqldeveloper.sh 
+   69  sudo apt i vim
+   70  sudo apt -i vim
+   71  sudo apt install vim
+   72  vim sqldeveloper.sh 
+   73  ls
+   74  cd ..
+   75  ls
+   76  sh sqldeveloper/sqldeveloper.sh 
+   77  cd ..
+   78  ls /usr/lib/jvm/
+   79  ls /usr/lib/jvm/jdk-18/
+   80  cd opt/sqldeveloper/
+   81  sh sqldeveloper.sh 
+   82  ls
+   83  sudo sqldeveloper
+   84  sudo sqldeveloper/
+   85  sqldeveloper/
+   86  sqldeveloper
+   87  ls home/mfadhili/.sqldeveloper/22.2.0/
+   88  ls /home/mfadhili/.sqldeveloper/22.2.0/
+   89  ls /home/mfadhili/.sqldeveloper/
+   90  ls /home/mfadhili/.sqldeveloper/system22.2.0.173.2018/
+   91  vim sqldeveloper.sh 
+   92  sqldeveloper
+   93  bash 
+   94  exit
+   95  sls create --template
+   96  cd demo1/
+   97  ls
+   98  sls create --help
+   99  clear
+  100  sls create --template aws-nodejs-typescript --path udagram
+  101  npm install
+  102  sls deploy -v
+  103  ls
+  104  cd udagram/
+  105  ls
+  106  npm install aws-sdk --save-dev
+  107  npm install aws-lambda --save-dev
+  108  code .
+  109  ls
+  110  aws dynamodb create-table --cli-input-json create-table.json --region us-east-1
+  111  aws dynamodb create-table --cli-input-json create_table.json --region us-east-1
+  112  aws dynamodb create-table --cli-input-json create_table.json --region us-east-1 --verbose
+  113  aws dynamodb create-table --cli-input-json create_table.json --region us-east-1 --debug
+  114  clear
+  115  aws dynamodb create-table --generate-cli-skeleton
+  116  aws dynamodb create-table --cli-input-json create_table.json --region us-east-1 --debug
+  117  npm install uuid --save
+  118  sls install dynamodb
+  119  sls dynamodb install
+  120  code .
+  121  ls
+  122  cd todo1/
+  123  ls
+  124  serverless deploy
+  125  ls
+  126  cat serverless.ts 
+  127  serverless deploy
+  128  cd ..
+  129  ls
+  130  cd ..
+  131  ls
+  132  cd ..
+  133  ls
+  134  cd ..
+  135  ls
+  136  cd serverless/
+  137  ls -la
+  138  cd demo/
+  139  ls -la
+  140  cd Todo_App/
+  141  ls -la
+  142  git add .
+  143  git commit -m "Code complete, but needes debugging"
+  144  git push
+  145  npm install 
+  146  clear
+  147  cat .gitignore 
+  148  git clone git@github.com:udacity/cloud-developer.git
+  149  ls
+  150  echo "cloud-developer" >> .gitignore 
+  151  cat .gitignore 
+  152  git add .
+  153  git commit -m "Still on it"
+  154  git push
+  155  cd ..
+  156  cd Udacity-Cloud-Dev/
+  157  cd serverless/
+  158  cd demo/
+  159  ls
+  160  cd demo1/
+  161  ls
+  162  cd udagram/
+  163  code .
+  164  cd /home/
+  165  ls
+  166  cd mfadhili/
+  167  ls 
+  168  sudo ap install Downloads/jdk-17.0.4.1_linux-x64_bin.deb 
+  169  sudo apt install Downloads/jdk-17.0.4.1_linux-x64_bin.deb 
+  170  whereis java
+  171  readlink -f $(which java)
+  172  which java
+  173  echo JAVA_HOME
+  174  echo $PATH
+  175  java -version
+  176  ls /lib/jvm/
+  177  ls /lib/jvm/jdk-17/bin/java
+  178  sudo vim /etc/environment
+  179  source /etc/environment
+  180  java -version
+  181  sudo vim /etc/environment
+  182  source /etc/environment
+  183  java -version
+  184  sudo rm /lib/jvm/jdk-1* -r
+  185  ls /lib/jvm/
+  186  sudo vim /etc/environment
+  187  sudo apt install openjdk-17
+  188  sudo apt install openjdk-17-jre-headless
+  189  java -version
+  190  ls /lib/jvm/
+  191  ls /lib/jvm/java-17-openjdk-amd64/
+  192  ls /lib/jvm/j
+  193  sqldeveloper
+  194  cd opt/
+  195  ls
+  196  cd sqldeveloper/
+  197  ls
+  198  sh sqldeveloper.sh 
+  199  sudo sh sqldeveloper.sh 
+  200  sh sqldeveloper.sh 
+  201  sudo sh sqldeveloper.sh 
+  202  sudo vim /home/mfadhili/.sqldeveloper/22.2.0/product.conf
+  203  sudo sh sqldeveloper.sh 
+  204  cd ~
+  205  ls
+  206  sudo apt install /home/mfadhili/Downloads/jdk-17.0.4.1_linux-x64_bin.deb 
+  207  sudo vim /home/mfadhili/.sqldeveloper/22.2.0/product.conf
+  208  sudo apt remove openjdk
+  209  sudo apt remove openjdk-17-jre-headless
+  210  java -version
+  211  sudo vim /home/mfadhili/.sqldeveloper/22.2.0/product.conf
+  212  sudo sh sqldeveloper.sh 
+  213  sudo apt install /home/mfadhili/Downloads/jdk-17.0.4.1_linux-x64_bin.deb 
+  214  sudo apt remove default-jdk default-jre
+  215  java -version
+  216  sudo vim /home/mfadhili/.sqldeveloper/22.2.0/product.conf
+  217  mysql
+  218  ls /lib/jvm/
+  219  ls
+  220  cd .
+  221  cd sqldeveloper/
+  222  ls /lib/jvm/java-17-openjdk-amd64/
+  223  sh sqldeveloper.sh 
+  224  ls /lib/jvm/
+  225  ls /lib/jvm/default-java/
+  226  sh sqldeveloper.sh 
+  227  ls /lib/jvm/
+  228  sh sqldeveloper.sh 
+  229  dpkg -l
+  230  sudo apt-get purge openjdk-\*
+  231  java -version
+  232  sudo dpkg -i /home/mfadhili/Downloads/jdk-17.0.4.1_linux-x64_bin.deb y
+  233  sudo dpkg -i /home/mfadhili/Downloads/jdk-17.0.4.1_linux-x64_bin.deb -y
+  234  sudo dpkg -i /home/mfadhili/Downloads/jdk-17.0.4.1_linux-x64_bin.deb
+  235  ls /lib/jvm/
+  236  sudo apt install ./Downloads/teams_1.5.00.10453_amd64.deb 
+  237  cd opt/
+  238  ls
+  239  sh sqldeveloper/sqldeveloper.sh 
+  240  sudo systemctl list
+  241  sudo systemctl --help
+  242  apropos services
+  243  apropos check services
+  244  service --status-all
+  245  sudo systemctl enable oracle-xe
+  246  sudo systemctl start oracle-xe
+  247  sudo systemctl enable oracle-xe
+  248  service --status oracle-xe
+  249  systemctl list-units
+  250  systemctl list-units | grep oracle
+  251  sudo systemctl start oracle-xe
+  252  service --status oracle-xe
+  253  service --status oracle
+  254  systemctl list-units | grep oracle
+  255  11
+  256  sudo dpkg --remove visual-studio-code
+  257  sudo dpkg --remove code
+  258  sudo dpkg --install ./Downloads/code_1.71.0-1662018389_amd64.deb 
+  259  npm i
+  260  npm run start
+  261  npm run build
+  262  npm i history --save
+  263  npm i create-history
+  264  nom --helo
+  265  npm --help
+  266  npm uninstall create-history
+  267  npm run build
+  268  npm i
+  269  npm uninstall @types/react-dom
+  270  npm install @types/react-dom --save-dep
+  271  npm uninstall @types/react-router-dom
+  272  npm install @types/react-router-dom --save-dep
+  273  npm install @types/react-router-dom --save-dev
+  274  npm install @types/react-dom --save-dev
+  275  npm run build
+  276  npm unistall @types/react
+  277  npm uninstall @types/react
+  278  npm install @types/react --save-dev
+  279  npm run build
+  280  npm install --save react-native@https://github.com/expo/react-native/archive/sdk-32.0.1.tar.gz
+  281  npm install --save react-native
+  282  npm uninstall react-native
+  283  npm install --save react-native@https://github.com/expo/react-native/archive/sdk-32.0.1.tar.gz
+  284  npm uninstall react @types/react
+  285  npm uninstall react@16.5  @types/react@16.5
+  286  npm install react@16.5  @types/react@16.5
+  287  npm install react@16.5  @types/react@16.5.0
+  288  npm install react@16.5  @types/react
+  289  npm install --save react-native@https://github.com/expo/react-native/archive/sdk-32.0.1.tar.gz
+  290  npm install --save react-native@https://github.com/expo/react-native/archive/sdk-32.0.1.tar.gz --force
+  291  npm run build
+  292  npm install @types/react-native
+  293  npm install @types/react-native --legacy-peer-deps
+  294  npm run build
+  295  echo history > history.txt
+  296  history
+  297  history > history.txt 
+  298  history > history2.txt
